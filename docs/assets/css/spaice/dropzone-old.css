@@ -1,0 +1,14 @@
+.dropzone {
+  text-align: center;
+  font-size: 18px;
+}
+
+.glyphicon-download {
+  font-size: 1.5em;
+}
+
+#DropZoneFiddle {
+  cursor: pointer;
+  border: 1px solid #000;
+  padding: 30px 0;
+}
