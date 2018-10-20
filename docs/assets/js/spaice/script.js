@@ -46,10 +46,16 @@ $( document ).ready(function() {
 
   window.selected_model = 'earth';
   $('.card').click(function () {
-    window.selected_model = this.dataset['model'];
+    window.selected_model = this.dataset['model']
+    window.location.hash = '#' + this.dataset['model'];
 
     $('.card').removeClass('card-selected');
     $(this).addClass('card-selected');
+  });
+
+  $(".card[data-model='" + window.location.hash.substring(1) + "']").click();
+  $(window).on('hashchange', function () {
+    $(".card[data-model='" + window.location.hash.substring(1) + "']").click();
   });
 });
 
