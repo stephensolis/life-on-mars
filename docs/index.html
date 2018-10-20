@@ -47,6 +47,10 @@
     padding: 30px 0;
   }
 
+  .button-try-again {
+    margin:auto;
+    display:block;
+  }
     /************************************/
 	/* Float four columns side by side */
 	.column {
@@ -117,10 +121,10 @@
         </div>
       </div>
       <div class="navbar-translate">
-        <a class="navbar-brand">
+        <a class="navbar-brand" href="#" rel="tooltip" title="Designed by SpAIce Team" data-placement="bottom" target="_blank">
           Our Styles
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-bar top-bar"></span>
           <span class="navbar-toggler-bar middle-bar"></span>
           <span class="navbar-toggler-bar bottom-bar"></span>
@@ -128,14 +132,14 @@
       </div>
       <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="assets/img/blurred-image-1.jpg">
         <ul class="navbar-nav">
-        <!--
           <li class="nav-item">
             <a class="nav-link" href="#">Suggest a style ?</a>
           </li>
+		  <!--
           <li class="nav-item">
             <a class="nav-link" href="#">Contact</a>
           </li>
-
+      
           <li class="nav-item">
             <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/CreativeTim" target="_blank">
               <i class="fab fa-twitter"></i>
@@ -264,9 +268,14 @@
       <i class="fa fa-upload fa-3x" aria-hidden="true"></i><br/>
       <div class="dz-default dz-message"><span>Upload your image</span></div>
     </form>
+	
+	<!-- output image -->
     <div id="output_div" style="display: none;">
-      <img id="output_image"> <br/>
-      <button id="output_try_again">Try another image</button>
+      <img id="output_image" class="center"><br>
+	  <div>
+	    <button type="button" id="output_try_again" class="btn btn-warning button-try-again">Try another image</button>
+	  </div>
+	  
     </div>
 
     <script>
