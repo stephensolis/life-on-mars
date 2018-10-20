@@ -121,6 +121,7 @@ def infer_munit(model, input_path, output_path):
                                         transforms.ToTensor(),
                                         transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
         image = Variable(transform(Image.open(input_path).convert('RGB')).unsqueeze(0).cuda())
+        original_size = (image.size[1], image.size[0])
 
         # Start testing
         content, _ = encode(image)
@@ -135,7 +136,8 @@ def infer_munit(model, input_path, output_path):
         outputs = decode(content, s)
         outputs = (outputs + 1) / 2.
 
-        vutils.save_image(outputs.data, output_path, padding=0, normalize=True)
+        resized_data = transforms.Resize(original_size)(transforms.ToPILImage()(outputs.data[0].cpu()))
+        resized_data.save(path)
 
 def infer_photostyle(model, input_path, output_path):
     p_wct, p_pro, style_path = model
