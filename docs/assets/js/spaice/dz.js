@@ -13,7 +13,19 @@ Dropzone.options.DropZoneFiddle = {
       formData.append("model", "photo1");
     });
     this.on("success", function(file, responseText) {
-      document.getElementById('output_image').src = 'data:image/jpeg;base64, ' + responseText;
+      $('#output_image').attr('src', 'data:image/jpeg;base64, ' + responseText);
+      $('#DropZoneFiddle').hide();
+      $('#output_div').show();
+    });
+    this.on("complete", function(file) {
+      this.removeAllFiles(true);
     });
   }
 };
+
+$(function () {
+  $('#output_try_again').click(function () {
+    $('#DropZoneFiddle').show();
+    $('#output_div').hide();
+  });
+});
