@@ -140,8 +140,9 @@ def infer_munit(model, input_path, output_path):
         transform = transforms.Compose([transforms.Resize(new_size),
                                         transforms.ToTensor(),
                                         transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
-        image = Variable(transform(Image.open(input_path).convert('RGB')).unsqueeze(0).cuda())
-        original_size = (image.size()[2], image.size()[3])
+        img_file = Image.open(input_path)
+        original_size = (img_file.size[1], img_file.size[0])
+        image = Variable(transform(img_file.convert('RGB')).unsqueeze(0).cuda())
 
         # Start testing
         content, _ = encode(image)
