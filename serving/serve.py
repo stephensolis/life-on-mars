@@ -79,6 +79,27 @@ all_opts = {
         'style': 'styles/venus.jpg',
         'checkpoint': 'models/generator_planets2earth.pt'
     }),
+    'kandinsky2': SimpleNamespace(**{
+        'type': 'munit',
+        'config': 'configs/mars2earth.yaml',
+        'a2b': 1,
+        'style': '',
+        'checkpoint': 'models/generator_earth2kandisnky.pt'
+    }),
+    'mars2earth': SimpleNamespace(**{
+        'type': 'munit',
+        'config': 'configs/mars2earth.yaml',
+        'a2b': 1,
+        'style': '',
+        'checkpoint': 'models/generator_mars2earth_landscape.pt'
+    }),
+    'earth2mars': SimpleNamespace(**{
+        'type': 'munit',
+        'config': 'configs/mars2earth.yaml',
+        'a2b': 0,
+        'style': '',
+        'checkpoint': 'models/generator_mars2earth_landscape.pt'
+    }),
     'kandinsky': SimpleNamespace(**{
         'type': 'photostyle',
         'model': 'models/photo_wct.pth',
