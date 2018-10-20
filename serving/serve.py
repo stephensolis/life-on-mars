@@ -1,20 +1,21 @@
 import os
 import tempfile
+import sys
 from flask import Flask, jsonify, request, send_file
 from flask_cors import CORS
 from types import SimpleNamespace
 from base64 import b64encode
 
+import torch
 from utils import get_config
 from trainer import MUNIT_Trainer
-import argparse
 from torch.autograd import Variable
 import torchvision.utils as vutils
-import sys
-import torch
-import os
 from torchvision import transforms
 from PIL import Image
+
+import process_stylization
+from photo_wct import PhotoWCT
 
 
 #########
@@ -22,12 +23,18 @@ from PIL import Image
 #########
 
 all_opts = {
-    'model1': SimpleNamespace(**{
+    'munit1': SimpleNamespace(**{
         'type': 'munit',
         'config': 'configs/mars2earth.yaml',
         'a2b': 1,
         'style': '', # style image path
         'checkpoint': 'models/gen_00510000.pt'
+    }),
+    'photo1': SimpleNamespace(**{
+        'type': 'photostyle',
+        'model': 'models/photo_wct.pth',
+        'style_image_path': 'styles/style1.jpg',
+        'fast': True
     })
 }
 
@@ -67,11 +74,27 @@ def build_munit_model(opts):
 
     return (encode, style_encode, decode, new_size, style_image, style_dim)
 
+def build_photostyle_model(args):
+    p_wct = PhotoWCT()
+    p_wct.load_state_dict(torch.load(args.model))
+    p_wct.cuda(0)
+
+    if args.fast:
+        from photo_gif import GIFSmoothing
+        p_pro = GIFSmoothing(r=35, eps=0.001)
+    else:
+        from photo_smooth import Propagator
+        p_pro = Propagator()
+
+    return (p_wct, p_pro, args.style_image_path)
+
 models = {}
 for key in all_opts:
     opts = all_opts[key]
     if opts.type == 'munit':
         models[key] = build_munit_model(opts)
+    elif opts.type == 'photostyle':
+        models[key] = build_photostyle_model(opts)
 
 
 #################
@@ -102,6 +125,22 @@ def infer_munit(model, input_path, output_path):
 
         vutils.save_image(outputs.data, output_path, padding=0, normalize=True)
 
+def infer_photostyle(model, input_path, output_path):
+    p_wct, p_pro, style_path = model
+
+    process_stylization.stylization(
+        stylization_module=p_wct,
+        smoothing_module=p_pro,
+        content_image_path=input_path,
+        style_image_path=style_path,
+        content_seg_path=[],
+        style_seg_path=[],
+        output_image_path=output_path,
+        cuda=1,
+        save_intermediate=False,
+        no_post=False
+    )
+
 
 #########
 # serving
@@ -110,10 +149,6 @@ def infer_munit(model, input_path, output_path):
 app = Flask(__name__, static_url_path='')
 app.config.from_object(__name__)
 CORS(app)
-
-@app.errorhandler(Exception)
-def unhandled_exception(exception):
-    return jsonify({'error': str(exception)})
 
 @app.route('/')
 def root():
@@ -138,6 +173,8 @@ def infer():
 
             if opts.type == 'munit':
                 infer_munit(model, input_path, output_path)
+            elif opts.type == 'photostyle':
+                infer_photostyle(model, input_path, output_path)
 
             return b64encode(open(output_path, 'rb').read())
 
