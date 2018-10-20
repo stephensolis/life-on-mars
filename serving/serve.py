@@ -23,7 +23,7 @@ from photo_wct import PhotoWCT
 #########
 
 all_opts = {
-    'munit1': SimpleNamespace(**{
+    'mars': SimpleNamespace(**{
         'type': 'munit',
         'config': 'configs/mars2earth.yaml',
         'a2b': 1,
