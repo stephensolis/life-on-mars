@@ -23,12 +23,26 @@ from photo_wct import PhotoWCT
 #########
 
 all_opts = {
-    'mars': SimpleNamespace(**{
+    'earth': SimpleNamespace(**{
         'type': 'munit',
         'config': 'configs/mars2earth.yaml',
         'a2b': 1,
-        'style': '', # style image path
-        'checkpoint': 'models/gen_00510000.pt'
+        'style': '',
+        'checkpoint': 'models/generator_planets2earth.pt'
+    }),
+    'moon': SimpleNamespace(**{
+        'type': 'munit',
+        'config': 'configs/mars2earth.yaml',
+        'a2b': 0,
+        'style': 'styles/moon.jpg',
+        'checkpoint': 'models/generator_planets2earth.pt'
+    }),
+    'mars': SimpleNamespace(**{
+        'type': 'munit',
+        'config': 'configs/mars2earth.yaml',
+        'a2b': 0,
+        'style': 'styles/mars.jpg',
+        'checkpoint': 'models/generator_planets2earth.pt'
     }),
     'kandinsky': SimpleNamespace(**{
         'type': 'photostyle',
@@ -121,7 +135,7 @@ def infer_munit(model, input_path, output_path):
                                         transforms.ToTensor(),
                                         transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
         image = Variable(transform(Image.open(input_path).convert('RGB')).unsqueeze(0).cuda())
-        original_size = (image.size[1], image.size[0])
+        original_size = (image.size()[2], image.size()[3])
 
         # Start testing
         content, _ = encode(image)
