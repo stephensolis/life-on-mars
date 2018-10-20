@@ -27,7 +27,7 @@ all_opts = {
         'type': 'munit',
         'config': 'configs/mars2earth.yaml',
         'a2b': 1,
-        'style': '',
+        'style': 'styles/earth.jpg',
         'checkpoint': 'models/generator_planets2earth.pt'
     }),
     'moon': SimpleNamespace(**{
