@@ -97,14 +97,14 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
       <a class="dropdown-header">Planet Styles</a>
-      <a id="mars-style-background" class="dropdown-item" href="#">Mars Style</a>
-      <a id="moon-style-background" class="dropdown-item" href="#">Moon Style</a>
-      <a id="earth-style-background" class="dropdown-item" href="#">Earth Style</a>
+      <a id="mars-style-background" class="dropdown-item" href="#mars">Mars Style</a>
+      <a id="moon-style-background" class="dropdown-item" href="#moon">Moon Style</a>
+      <a id="earth-style-background" class="dropdown-item" href="#earth">Earth Style</a>
       <div class="dropdown-divider"></div>
       <a class="dropdown-header">Painter Styles</a>
-      <a id="kandinsky-style-background" class="dropdown-item" href="#">Kandinsky Style</a>
-      <a id="vangogh-style-background" class="dropdown-item" href="#">Van Gogh Style</a>
-      <a id="davinci-style-background" class="dropdown-item" href="#">Da Vinci Style</a>
+      <a id="kandinsky-style-background" class="dropdown-item" href="#kandinsky">Kandinsky Style</a>
+      <a id="vangogh-style-background" class="dropdown-item" href="#vangogh">Van Gogh Style</a>
+      <a id="davinci-style-background" class="dropdown-item" href="#davinci">Da Vinci Style</a>
 
           <!--<a class="dropdown-header">Dropdown header</a>
           <a class="dropdown-item" href="#">Action</a>
@@ -174,6 +174,7 @@
             <h2>10</h2>
             <p>Supported styles</p>
           </div>
+          <!--
           <div class="social-description">
             <h2>90</h2>
             <p>Instagram Posts</p>
@@ -182,6 +183,7 @@
             <h2>102</h2>
             <p>Instagram Likes</p>
           </div>
+          -->
         </div>
       </div>
     </div>
@@ -197,11 +199,9 @@
             <i class="fab fa-instagram"></i>
           </a>-->
         </div>
-        <h3 class="title">The challenge</h3>
-        <h5 class="description">How to adapt NASA images or other spectral data and develop an interpretation of NASA’s Earth observations ? How to build a tool or an application that allows others to transform or enhance NASA’s Earth images or spectral band data into novel creations to inform, educate, or inspire ?</h5>
-    <h3 class="title">Our solution</h3>
-        <h5 class="description">We build web application empowered by Artifical Intelligence to transfer styles between planet images.</h5>
-    <h3 class="title">Go artify planet images with AI</h3>
+        <h3 class="title">Our solution</h3>
+        <h5 class="description">This is an app powered by Deep Learning to transform your image to look like a style of your choice.</h5>
+        <h3 class="title">Artify your images with AI</h3>
 
 		<!-- Style picker -->
 		<h3 class="title">Choose a style</h3>
@@ -236,7 +236,7 @@
 		  <img class="card-img-top" src="assets/img/spaice/styles/kandinsky-background.jpg">
 		  <div class="card-body">
 			<h5 class="card-title">Kandinsky</h5>
-			<p class="card-text">Purely Abstract</p>
+			<p class="card-text">Abstract</p>
 		  </div>
 		</div>
 
@@ -258,7 +258,7 @@
 
 		</div>
 	<!-- / Style picker -->
-	<h3 class="title">Provide your image to artify</h3>
+	<h3 class="title">Choose your image</h3>
     <!-- dropzone.js -->
     <form class="dropzone dz-clickable" id="DropZoneFiddle">
       <i class="fa fa-upload fa-3x" aria-hidden="true"></i><br/>
@@ -284,7 +284,7 @@
     <!-- / dropzone.js -->
         <div class="row">
           <div class="col-md-6 ml-auto mr-auto">
-            <h4 class="title text-center">A selection of artified planet images</h4>
+            <h4 class="title text-center">A selection of artified images</h4>
             <div class="nav-align-center">
               <ul class="nav nav-pills nav-pills-primary nav-pills-just-icons" role="tablist">
                 <li class="nav-item">
@@ -359,7 +359,7 @@
           &copy;
           <script>
             document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
-          </script>, Designed by SpAIce Team.
+          </script>, designed by SpAIce Team.
         </div>
       </div>
     </footer>
