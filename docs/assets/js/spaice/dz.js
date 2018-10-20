@@ -22,15 +22,3 @@ Dropzone.options.DropZoneFiddle = {
     });
   }
 };
-
-$(function () {
-  $('#output_try_again').click(function () {
-    $('#DropZoneFiddle').show();
-    $('#output_div').hide();
-  });
-
-  window.selected_model = 'earth';
-  $('.card').click(function () {
-    window.selected_model = this.dataset['model'];
-  });
-});
