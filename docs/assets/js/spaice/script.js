@@ -24,10 +24,10 @@ $( document ).ready(function() {
   });
   
   
-  //Add picasso button listner
-  var picassoBtn = document.getElementById('picasso-style-background');
-  picassoBtn.addEventListener('click', function(event) {
-   backgroundImage.style = style="background-image:url('../assets/img/spaice/picasso-background.jpg');";
+  //Add kandinsky button listner
+  var kandinskyBtn = document.getElementById('kandinsky-style-background');
+  kandinskyBtn.addEventListener('click', function(event) {
+   backgroundImage.style = style="background-image:url('../assets/img/spaice/kandinsky-background.jpg');";
   });
   
   //Add vangogh button listner
