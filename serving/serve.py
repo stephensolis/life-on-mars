@@ -137,7 +137,7 @@ def infer_munit(model, input_path, output_path):
         outputs = (outputs + 1) / 2.
 
         resized_data = transforms.Resize(original_size)(transforms.ToPILImage()(outputs.data[0].cpu()))
-        resized_data.save(path)
+        resized_data.save(output_path)
 
 def infer_photostyle(model, input_path, output_path):
     p_wct, p_pro, style_path = model
