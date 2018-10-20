@@ -32,21 +32,21 @@
 
 
   <style type="text/css">
-		.dropzone {
-	  text-align: center;
-	  font-size: 18px;
-	}
+    .dropzone {
+    text-align: center;
+    font-size: 18px;
+  }
 
-	.glyphicon-download {
-	  font-size: 1.5em;
-	}
+  .glyphicon-download {
+    font-size: 1.5em;
+  }
 
-	#DropZoneFiddle {
-	  cursor: pointer;
-	  border: 1px solid #000;
-	  padding: 30px 0;
-	}
-	  </style>
+  #DropZoneFiddle {
+    cursor: pointer;
+    border: 1px solid #000;
+    padding: 30px 0;
+  }
+    </style>
     <script src="assets/js/spaice/dz.js" type="text/javascript"></script>
 </head>
 
@@ -61,15 +61,15 @@
           <span class="button-bar"></span>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-		  <a class="dropdown-header">Planet Styles</a>
-		  <a id="mars-style-background" class="dropdown-item" href="#">Mars Style</a>
-		  <a id="moon-style-background" class="dropdown-item" href="#">Moon Style</a>
-		  <a id="earth-style-background" class="dropdown-item" href="#">Earth Style</a>
-		  <div class="dropdown-divider"></div>
-		  <a class="dropdown-header">Painter Styles</a>
-		  <a id="picasso-style-background" class="dropdown-item" href="#">Picasso Style</a>
-		  <a id="vangogh-style-background" class="dropdown-item" href="#">Van Gogh Style</a>
-		  <a id="davinci-style-background" class="dropdown-item" href="#">Da Vinci Style</a>
+      <a class="dropdown-header">Planet Styles</a>
+      <a id="mars-style-background" class="dropdown-item" href="#">Mars Style</a>
+      <a id="moon-style-background" class="dropdown-item" href="#">Moon Style</a>
+      <a id="earth-style-background" class="dropdown-item" href="#">Earth Style</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-header">Painter Styles</a>
+      <a id="picasso-style-background" class="dropdown-item" href="#">Picasso Style</a>
+      <a id="vangogh-style-background" class="dropdown-item" href="#">Van Gogh Style</a>
+      <a id="davinci-style-background" class="dropdown-item" href="#">Da Vinci Style</a>
 
           <!--<a class="dropdown-header">Dropdown header</a>
           <a class="dropdown-item" href="#">Action</a>
@@ -99,7 +99,7 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Contact</a>
           </li>
-		  <!--
+      <!--
           <li class="nav-item">
             <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/CreativeTim" target="_blank">
               <i class="fab fa-twitter"></i>
@@ -153,7 +153,7 @@
       <div class="container">
         <div class="button-container">
           <a href="https://www.instagram.com/artify_earth/" target="_blank"  class="btn btn-primary btn-round btn-lg">Follow Us &nbsp;<i class="fab fa-instagram"></i></a>
-		  <!--
+      <!--
           <a href="#button" class="btn btn-default btn-round btn-lg btn-icon" rel="tooltip" title="Follow me on Twitter">
             <i class="fab fa-twitter"></i>
           </a>
@@ -163,30 +163,30 @@
         </div>
         <h3 class="title">The challenge</h3>
         <h5 class="description">How to adapt NASA images or other spectral data and develop an interpretation of NASA’s Earth observations ? How to build a tool or an application that allows others to transform or enhance NASA’s Earth images or spectral band data into novel creations to inform, educate, or inspire ?</h5>
-		<h3 class="title">Our solution</h3>
+    <h3 class="title">Our solution</h3>
         <h5 class="description">We build web application empowered by Artifical Intelligence to transfer styles between planet images.</h5>
-		<h3 class="title">Go artify planet images with AI</h3>
+    <h3 class="title">Go artify planet images with AI</h3>
 
-		<!-- dropzone.js -->
-		<form action="" class="dropzone dz-clickable" id="DropZoneFiddle">
-		  <i class="fa fa-upload fa-3x" aria-hidden="true"></i>
+    <!-- dropzone.js -->
+    <form class="dropzone dz-clickable" id="DropZoneFiddle">
+      <i class="fa fa-upload fa-3x" aria-hidden="true"></i><br/>
+      <div class="dz-default dz-message"><span>Upload your image</span></div>
+    </form>
+    <img id="output_image">
 
-		  <br>
-		<div class="dz-default dz-message"><span>Upload your image</span></div></form>
-
-		  <script>
-			// tell the embed parent frame the height of the content
-			if (window.parent && window.parent.parent){
-			  window.parent.parent.postMessage(["resultsFrame", {
-				height: document.body.getBoundingClientRect().height,
-				slug: "Lny2a5sc"
-			  }], "*")
-			}
-		  </script>
+    <script>
+      // tell the embed parent frame the height of the content
+      if (window.parent && window.parent.parent){
+        window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: "Lny2a5sc"
+        }], "*")
+      }
+    </script>
 
 
 
-		<!-- / dropzone.js -->
+    <!-- / dropzone.js -->
         <div class="row">
           <div class="col-md-6 ml-auto mr-auto">
             <h4 class="title text-center">A selection of artified planet images</h4>
