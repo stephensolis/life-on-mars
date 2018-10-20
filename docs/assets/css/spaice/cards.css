@@ -16,6 +16,10 @@
   cursor: pointer;
 }
 
+.card.card-selected {
+  background-color: #008CBA;
+}
+
 .card-overlay-text {
   color: white;
   font-size: 20px;

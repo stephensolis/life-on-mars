@@ -47,6 +47,9 @@ $( document ).ready(function() {
   window.selected_model = 'earth';
   $('.card').click(function () {
     window.selected_model = this.dataset['model'];
+
+    $('.card').removeClass('card-selected');
+    $(this).addClass('card-selected');
   });
 });
 
