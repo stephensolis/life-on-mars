@@ -147,7 +147,7 @@ def infer_munit(model, input_path, output_path):
         content, _ = encode(image)
 
         style_rand = Variable(torch.randn(1, style_dim, 1, 1).cuda())
-        if style_image:
+        if style_image is not None:
             _, style = style_encode(style_image)
         else:
             style = style_rand
