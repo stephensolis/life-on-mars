@@ -30,10 +30,22 @@ all_opts = {
         'style': '', # style image path
         'checkpoint': 'models/gen_00510000.pt'
     }),
-    'photo1': SimpleNamespace(**{
+    'kandinsky': SimpleNamespace(**{
         'type': 'photostyle',
         'model': 'models/photo_wct.pth',
-        'style_image_path': 'styles/style1.jpg',
+        'style_image_path': 'styles/kandinsky.jpg',
+        'fast': True
+    }),
+    'vangogh': SimpleNamespace(**{
+        'type': 'photostyle',
+        'model': 'models/photo_wct.pth',
+        'style_image_path': 'styles/vangogh.jpg',
+        'fast': True
+    }),
+    'davinci': SimpleNamespace(**{
+        'type': 'photostyle',
+        'model': 'models/photo_wct.pth',
+        'style_image_path': 'styles/davinci.jpg',
         'fast': True
     })
 }
