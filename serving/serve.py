@@ -44,6 +44,41 @@ all_opts = {
         'style': 'styles/mars.jpg',
         'checkpoint': 'models/generator_planets2earth.pt'
     }),
+    'mercury': SimpleNamespace(**{
+        'type': 'munit',
+        'config': 'configs/mars2earth.yaml',
+        'a2b': 0,
+        'style': 'styles/mercury.jpg',
+        'checkpoint': 'models/generator_planets2earth.pt'
+    }),
+    'neptune': SimpleNamespace(**{
+        'type': 'munit',
+        'config': 'configs/mars2earth.yaml',
+        'a2b': 0,
+        'style': 'styles/neptune.jpg',
+        'checkpoint': 'models/generator_planets2earth.pt'
+    }),
+    'saturn': SimpleNamespace(**{
+        'type': 'munit',
+        'config': 'configs/mars2earth.yaml',
+        'a2b': 0,
+        'style': 'styles/saturn.jpg',
+        'checkpoint': 'models/generator_planets2earth.pt'
+    }),
+    'uranus': SimpleNamespace(**{
+        'type': 'munit',
+        'config': 'configs/mars2earth.yaml',
+        'a2b': 0,
+        'style': 'styles/uranus.jpg',
+        'checkpoint': 'models/generator_planets2earth.pt'
+    }),
+    'venus': SimpleNamespace(**{
+        'type': 'munit',
+        'config': 'configs/mars2earth.yaml',
+        'a2b': 0,
+        'style': 'styles/venus.jpg',
+        'checkpoint': 'models/generator_planets2earth.pt'
+    }),
     'kandinsky': SimpleNamespace(**{
         'type': 'photostyle',
         'model': 'models/photo_wct.pth',
