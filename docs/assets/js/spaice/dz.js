@@ -10,7 +10,7 @@ Dropzone.options.DropZoneFiddle = {
   url: 'https://server.artifyearth.co/infer',
   init: function() {
     this.on("sending", function(file, xhr, formData) {
-      formData.append("model", "photo1");
+      formData.append("model", window.selected_model);
     });
     this.on("success", function(file, responseText) {
       $('#output_image').attr('src', 'data:image/jpeg;base64, ' + responseText);
@@ -27,5 +27,10 @@ $(function () {
   $('#output_try_again').click(function () {
     $('#DropZoneFiddle').show();
     $('#output_div').hide();
+  });
+
+  window.selected_model = 'earth';
+  $('.card').click(function () {
+    window.selected_model = this.dataset['model'];
   });
 });
