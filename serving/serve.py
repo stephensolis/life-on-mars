@@ -137,11 +137,13 @@ def infer_munit(model, input_path, output_path):
     encode, style_encode, decode, new_size, style_image, style_dim = model
 
     with torch.no_grad():
+        img_file = Image.open(input_path)
+        original_size = (img_file.size[1], img_file.size[0])
+        if min(original_size) < new_size:
+            new_size = min(original_size)
         transform = transforms.Compose([transforms.Resize(new_size),
                                         transforms.ToTensor(),
                                         transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
-        img_file = Image.open(input_path)
-        original_size = (img_file.size[1], img_file.size[0])
         image = Variable(transform(img_file.convert('RGB')).unsqueeze(0).cuda())
 
         # Start testing
