@@ -96,7 +96,13 @@ def build_munit_model(opts):
         else:
             new_size = config['new_size_b']
 
-    style_image = Variable(transform(Image.open(opts.style).convert('RGB')).unsqueeze(0).cuda()) if opts.style != '' else None
+    if opts.style != '':
+        transform = transforms.Compose([transforms.Resize(new_size),
+                                        transforms.ToTensor(),
+                                        transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
+        style_image = Variable(transform(Image.open(opts.style).convert('RGB')).unsqueeze(0).cuda())
+    else:
+        style_image = None
 
     return (encode, style_encode, decode, new_size, style_image, style_dim)
 
