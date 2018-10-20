@@ -8,7 +8,7 @@
   width: 100%;
   opacity: 0;
   transition: .4s ease;
-  background-color: #008CBA;
+  background-color: #f96332;
 }
 
 .card:hover .card-overlay {
@@ -17,7 +17,7 @@
 }
 
 .card.card-selected {
-  background-color: #008CBA;
+  background-color: #f96332;
 }
 
 .card-overlay-text {
