@@ -17,13 +17,6 @@ Dropzone.options.DropZoneFiddle = {
       var fr = new FileReader();
       fr.onload = function () {
         $('#input_image').attr('src', fr.result);
-        if ($('#input_image').prop('width') > $('#output_image').prop('width')) {
-          $('#input_image').prop('width', $('#output_image').prop('width'));
-          $('#input_image').prop('height', $('#output_image').prop('height'));
-        } else {
-          $('#output_image').prop('width', $('#input_image').prop('width'));
-          $('#output_image').prop('height', $('#input_image').prop('height'));
-        }
         $('#compare_image').twentytwenty();
       };
       fr.readAsDataURL(file);
