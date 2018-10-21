@@ -84,7 +84,7 @@ all_opts = {
         'config': 'configs/mars2earth.yaml',
         'a2b': 1,
         'style': '',
-        'checkpoint': 'models/generator_earth2kandisnky.pt'
+        'checkpoint': 'models/generator_earth2kandinsky.pt'
     }),
     'mars2earth': SimpleNamespace(**{
         'type': 'munit',
@@ -123,7 +123,7 @@ all_opts = {
         'model': 'models/photo_wct.pth',
         'style_image_path': 'styles/picasso.jpg',
         'fast': True
-    }) 
+    })
 }
 
 
