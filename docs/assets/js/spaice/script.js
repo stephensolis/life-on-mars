@@ -39,7 +39,7 @@ $( document ).ready(function() {
   });
 
   //-------------------------------------------------------------------------------------------------------
-  $('#output_try_again').click(function () {
+  $('#output_new_image').click(function () {
     $('#DropZoneFiddle').show();
     $('#output_div').hide();
   });
