@@ -366,19 +366,21 @@
     </form>
 
 	<!-- output image -->
-    <div id="output_div" style="display: none;">
-	   <div class="row">
-      <button type="button" id="output_new_image" class="btn btn-warning btn-lg button-try-again">Try another image</button>
-	    <!-- <button type="button" id="output_try_again" class="btn btn-warning btn-lg button-try-again">Re-try style</button> -->
-      <a id="output_download" download>
-        <button type="button" class="btn btn-warning btn-lg button-try-again">Download styled image</button>
-      </a>
-	  </div>
-	  <br><br>
-    <div id="compare_image">
-      <img id="input_image" style="height: 70vh;">
-      <img id="output_image" style="height: 70vh;">
-    </div>
+	<div class="ml-auto mr-auto">
+		<div id="output_div" style="display: none;">
+		  <div class="row">
+  			<div class="btn-group btn-group-justified ml-auto mr-auto">
+  				  <a id="output_new_image" class="btn btn-warning btn-lg button-try-again">Try another image</a>
+  				  <!-- <a id="output_try_again" class="btn btn-warning btn-lg button-try-again">Re-try style</a> -->
+  				  <a id="output_download" class="btn btn-warning btn-lg button-try-again" download>Download styled image</a>
+  			</div>
+		  </div>
+		  <br><br>
+      <div id="compare_image">
+        <img id="input_image">
+        <img id="output_image">
+      </div>
+		</div>
 	</div>
 
     <script>

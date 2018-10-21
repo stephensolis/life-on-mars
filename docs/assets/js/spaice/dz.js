@@ -17,10 +17,19 @@ Dropzone.options.DropZoneFiddle = {
       var fr = new FileReader();
       fr.onload = function () {
         $('#input_image').attr('src', fr.result);
+        $('#output_image').attr('src', 'data:image/jpeg;base64, ' + responseText);
+
+        var target_height = $(window).height() * 0.7;
+        var target_width = $('#input_image').prop('naturalWidth') * $(window).height() * 0.7 / $('#input_image').prop('naturalHeight');
+
+        $('#input_image').prop('height', target_height);
+        $('#input_image').prop('width', target_width);
+        $('#output_image').prop('height', target_height);
+        $('#output_image').prop('width', target_width);
+
         $('#compare_image').twentytwenty();
       };
       fr.readAsDataURL(file);
-      $('#output_image').attr('src', 'data:image/jpeg;base64, ' + responseText);
       $('#output_download').attr('href', 'data:image/jpeg;base64, ' + responseText);
 
       $('#DropZoneFiddle').hide();

@@ -44,9 +44,6 @@ $( document ).ready(function() {
     $('#DropZoneFiddle').show();
     $('#output_div').hide();
   });
-  $('#output_try_again').click(function () {
-    window.dropzone.processQueue();
-  });
 
   window.selected_model = 'earth';
   $('.card').click(function () {
