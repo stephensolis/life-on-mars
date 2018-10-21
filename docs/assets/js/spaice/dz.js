@@ -20,12 +20,14 @@ Dropzone.options.DropZoneFiddle = {
         $('#output_image').attr('src', 'data:image/jpeg;base64, ' + responseText);
 
         var target_height = $(window).height() * 0.7;
-        var target_width = $('#input_image').prop('naturalWidth') * $(window).height() * 0.7 / $('#input_image').prop('naturalHeight');
+        if (target_height < $('#input_image').prop('naturalHeight')) {
+          var target_width = $('#input_image').prop('naturalWidth') * $(window).height() * 0.7 / $('#input_image').prop('naturalHeight');
 
-        $('#input_image').prop('height', target_height);
-        $('#input_image').prop('width', target_width);
-        $('#output_image').prop('height', target_height);
-        $('#output_image').prop('width', target_width);
+          $('#input_image').prop('height', target_height);
+          $('#input_image').prop('width', target_width);
+          $('#output_image').prop('height', target_height);
+          $('#output_image').prop('width', target_width);
+        }
 
         $('#compare_image').twentytwenty();
       };
