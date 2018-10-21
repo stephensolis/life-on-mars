@@ -13,7 +13,14 @@ Dropzone.options.DropZoneFiddle = {
       formData.append("model", window.selected_model);
     });
     this.on("success", function(file, responseText) {
+      var fr = new FileReader();
+      fr.onload = function () {
+        $('#input_image').attr('src', fr.result);
+        $('#compare_image').twentytwenty();
+      };
+      fr.readAsDataURL(file);
       $('#output_image').attr('src', 'data:image/jpeg;base64, ' + responseText);
+
       $('#DropZoneFiddle').hide();
       $('#output_div').show();
     });
