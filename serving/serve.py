@@ -118,10 +118,10 @@ all_opts = {
         'style_image_path': 'styles/davinci.jpg',
         'fast': True
     }),
-    'michelangelo': SimpleNamespace(**{
+    'picasso': SimpleNamespace(**{
         'type': 'photostyle',
         'model': 'models/photo_wct.pth',
-        'style_image_path': 'styles/michelangelo.jpg',
+        'style_image_path': 'styles/picasso.jpg',
         'fast': True
     }) 
 }
