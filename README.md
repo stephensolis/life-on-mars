@@ -27,6 +27,9 @@ This work is a submission to the [Artify the Earth](https://2018.spaceappschalle
 ## Abstract
 There has been a lot of work in image (synthetic) generation using Artificial Intelligence in the last couple of years, but this work is distinguished from the rest since its novelty in the application of these state-of-the-art technologies to satellite and planet images. These methods are popularly known as [Neural Style Transfer](https://arxiv.org/abs/1508.06576), where the model is exposed to two domains: (1) the *content domain*, and (2) the *style reference domain*. After a training process, the model has learned the main features from the two domains, and it can act as a "styler" such that we present an input image, it transforms it to look like the content image (in this case Earth images), but “painted” in the appearance of the style reference domain.
 
+## Solution
+We used the state of the art models of style transfer for this project. We present a front end tool (https://artifyearth.co/)  where users can choose various style options (e.g. Earth, Moon, Mars, Jupiter, etc.) including converting earth images to other planets and vice versa. We also have some options to convert images into an artistic impression of the image.  
+
 ## Slides
 
 ## Results
