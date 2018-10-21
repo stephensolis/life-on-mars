@@ -17,7 +17,7 @@ Dropzone.options.DropZoneFiddle = {
       fr.onload = function () {
         $('#input_image').attr('src', fr.result);
         $('#compare_image').twentytwenty();
-        if ($('#input_image').prop('width') < $('#output_image').prop('width')) {
+        if ($('#input_image').prop('width') > $('#output_image').prop('width')) {
           $('#input_image').prop('width', $('#output_image').prop('width'));
           $('#input_image').prop('height', $('#output_image').prop('height'));
         } else {
