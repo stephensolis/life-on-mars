@@ -9,6 +9,7 @@ Dropzone.options.DropZoneFiddle = {
   acceptedFiles: '.png,.jpg,.gif,.jpeg,.bmp',
   url: 'https://server.artifyearth.co/infer',
   init: function() {
+    window.dropzone = this;
     this.on("sending", function(file, xhr, formData) {
       formData.append("model", window.selected_model);
     });
