@@ -2,6 +2,8 @@
 ## [Space Apps Challenge 2018](https://2018.spaceappschallenge.org/)
 This work is a submission to the [Artify the Earth](https://2018.spaceappschallenge.org/challenges/help-others-discover-earth/artify-earth/details) challenge.
 
+<img src="https://pbs.twimg.com/profile_images/1039168419587928065/w8VGYtei_400x400.jpg" width="120"> <img src="https://pbs.twimg.com/profile_images/188302352/nasalogo_twitter_400x400.jpg" width="100"> *SpaceApps is a NASA incubator innovation program.*
+
 ## Team
 
 | ![Stephen Solis][StephenSolis-photo]  | ![Albert Jimenez][AlbertJimenez-photo]  |  ![Adria Romero][AdriaRomero-photo] | ![Mohamed Akrout][MohamedAkrout-photo] | ![Anirudh Challa][AnirudhChalla-photo] |
