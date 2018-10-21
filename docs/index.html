@@ -21,16 +21,15 @@
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="assets/demo/demo.css" rel="stylesheet" />
   <link href="assets/css/spaice/cards.css" rel="stylesheet" />
-  <link href="assets/css/spaice/images.css" rel="stylesheet" />
   <!--<link href="assets/css/spaice/dropzone.css" rel="stylesheet" />
   <script src="assets/js/core/jquery.min.js" type="text/javascript"></script>
-  <script src="assets/js/core/popper.min.js" type="text/javascript"></script>-->
+  <script src="assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="assets/js/core/bootstrap.min.js" type="text/javascript"></script>-->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery.event.move@1.3.6/js/jquery.event.move.min.js"></script>
+
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.1.1/min/dropzone.min.js"></script>
-  <script src="assets/js/spaice/image-compare.js" type="text/javascript"></script>
 
 
   <style type="text/css">
@@ -49,7 +48,7 @@
     padding: 30px 0;
   }
 
-
+  
   .button-try-again {
     background-color: #f96332 !important;
     margin:auto;
@@ -136,10 +135,10 @@
       </div>
       <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="assets/img/blurred-image-1.jpg">
         <ul class="navbar-nav">
-      <!--
           <li class="nav-item">
             <a class="nav-link" href="#">Suggest a style ?</a>
           </li>
+		  <!--
           <li class="nav-item">
             <a class="nav-link" href="#">Contact</a>
           </li>
@@ -179,7 +178,7 @@
         <p class="category">Space Challenge App</p>
         <div class="content">
           <div class="social-description">
-            <h2>10</h2>
+            <h2>15</h2>
             <p>Supported styles</p>
           </div>
           <!--
@@ -215,7 +214,24 @@
 		<h3 class="title">Choose a style</h3>
 		<div class="row">
 
-
+		<div class="card" style="width: 11rem;" data-model="mercury">
+		  <img class="card-img-top" src="assets/img/spaice/styles/mercury-style.jpg">
+		  <div class="card-body">
+			<h5 class="card-title">Mercury</h5>
+		  </div>
+		  <div class="card-overlay">
+			<div class="card-overlay-text">Select</div>
+		  </div>
+		</div>
+		<div class="card" style="width: 11rem;" data-model="venus">
+		  <img class="card-img-top" src="assets/img/spaice/styles/venus-style.jpg">
+		  <div class="card-body">
+			<h5 class="card-title">Venus</h5>
+		  </div>
+		  <div class="card-overlay">
+			<div class="card-overlay-text">Select</div>
+		  </div>
+		</div>
 		<div class="card" style="width: 11rem;" data-model="earth">
 		  <img class="card-img-top" src="assets/img/spaice/styles/earth-style.jpg">
 		  <div class="card-body">
@@ -225,9 +241,19 @@
         <div class="card-overlay-text">Select</div>
       </div>
 		</div>
+		
+		<div class="card" style="width: 11rem;" data-model="earth-landscape">
+		  <img class="card-img-top" src="assets/img/spaice/styles/earth-landscape-style.jpg">
+		  <div class="card-body">
+  			<h5 class="card-title">Earth Landscape</h5>
+		  </div>
+      <div class="card-overlay">
+        <div class="card-overlay-text">Select</div>
+      </div>
+		</div>
 
 		<div class="card" style="width: 11rem;" data-model="moon">
-		  <img class="card-img-top" src="assets/img/spaice/styles/moon-background.jpg">
+		  <img class="card-img-top" src="assets/img/spaice/styles/moon-style.jpg">
 		  <div class="card-body">
 			<h5 class="card-title">Moon</h5>
 		  </div>
@@ -245,37 +271,15 @@
         <div class="card-overlay-text">Select</div>
       </div>
 		</div>
-
-		<div class="card" style="width: 11rem;" data-model="saturn">
-		  <img class="card-img-top" src="assets/img/spaice/styles/saturn-style.jpg">
+		<div class="card" style="width: 11rem;" data-model="mars-landscape">
+		  <img class="card-img-top" src="assets/img/spaice/styles/mars-landscape-style.jpg">
 		  <div class="card-body">
-			<h5 class="card-title">Saturn</h5>
+			<h5 class="card-title">Mars Landscape</h5>
 		  </div>
-		  <div class="card-overlay">
-			<div class="card-overlay-text">Select</div>
-		  </div>
+      <div class="card-overlay">
+        <div class="card-overlay-text">Select</div>
+      </div>
 		</div>
-
-		<div class="card" style="width: 11rem;" data-model="neptune">
-		  <img class="card-img-top" src="assets/img/spaice/styles/neptune-style.jpg">
-		  <div class="card-body">
-			<h5 class="card-title">Neptune</h5>
-		  </div>
-		  <div class="card-overlay">
-			<div class="card-overlay-text">Select</div>
-		  </div>
-		</div>
-
-		<div class="card" style="width: 11rem;" data-model="mercury">
-		  <img class="card-img-top" src="assets/img/spaice/styles/mercury-style.jpg">
-		  <div class="card-body">
-			<h5 class="card-title">Mercury</h5>
-		  </div>
-		  <div class="card-overlay">
-			<div class="card-overlay-text">Select</div>
-		  </div>
-		</div>
-
 		<div class="card" style="width: 11rem;" data-model="jupiter">
 		  <img class="card-img-top" src="assets/img/spaice/styles/jupiter-style.jpg">
 		  <div class="card-body">
@@ -285,17 +289,15 @@
 			<div class="card-overlay-text">Select</div>
 		  </div>
 		</div>
-
-		<div class="card" style="width: 11rem;" data-model="venus">
-		  <img class="card-img-top" src="assets/img/spaice/styles/venus-style.jpg">
+		<div class="card" style="width: 11rem;" data-model="saturn">
+		  <img class="card-img-top" src="assets/img/spaice/styles/saturn-style.jpg">
 		  <div class="card-body">
-			<h5 class="card-title">Venus</h5>
+			<h5 class="card-title">Saturn</h5>
 		  </div>
 		  <div class="card-overlay">
 			<div class="card-overlay-text">Select</div>
 		  </div>
 		</div>
-
 		<div class="card" style="width: 11rem;" data-model="uranus">
 		  <img class="card-img-top" src="assets/img/spaice/styles/uranus-style.jpg">
 		  <div class="card-body">
@@ -305,7 +307,27 @@
 			<div class="card-overlay-text">Select</div>
 		  </div>
 		</div>
-
+		<div class="card" style="width: 11rem;" data-model="neptune">
+		  <img class="card-img-top" src="assets/img/spaice/styles/neptune-style.jpg">
+		  <div class="card-body">
+			<h5 class="card-title">Neptune</h5>
+		  </div>
+		  <div class="card-overlay">
+			<div class="card-overlay-text">Select</div>
+		  </div>
+		</div>
+		
+		<div class="card" style="width: 11rem;" data-model="picasso">
+		  <img class="card-img-top" src="assets/img/spaice/styles/picasso-style.jpg">
+		  <div class="card-body">
+			<h5 class="card-title">Picasso</h5>
+		  </div>
+      <div class="card-overlay">
+        <div class="card-overlay-text">Select</div>
+      </div>
+		</div>
+		
+		
 		<div class="card" style="width: 11rem;" data-model="kandinsky">
 		  <img class="card-img-top" src="assets/img/spaice/styles/kandinsky-background.jpg">
 		  <div class="card-body">
@@ -351,10 +373,7 @@
 	    <button type="button" id="output_try_again" class="btn btn-warning btn-lg button-try-again">Try another image</button>
 	  </div>
 	  <br><br>
-    <div id="compare_image" class="twentytwenty-container center">
-      <img id="input_image">
-      <img id="output_image">
-    </div>
+      <img id="output_image" class="center">
 	</div>
 
     <script>
