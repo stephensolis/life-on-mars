@@ -79,6 +79,13 @@ all_opts = {
         'style': 'styles/venus.jpg',
         'checkpoint': 'models/generator_planets2earth.pt'
     }),
+    'jupiter': SimpleNamespace(**{
+        'type': 'munit',
+        'config': 'configs/mars2earth.yaml',
+        'a2b': 0,
+        'style': 'styles/jupiter.jpg',
+        'checkpoint': 'models/generator_planets2earth.pt'
+    }),
     'kandinsky2': SimpleNamespace(**{
         'type': 'munit',
         'config': 'configs/mars2earth.yaml',
