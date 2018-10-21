@@ -16,7 +16,6 @@ Dropzone.options.DropZoneFiddle = {
       var fr = new FileReader();
       fr.onload = function () {
         $('#input_image').attr('src', fr.result);
-        $('#compare_image').twentytwenty();
         if ($('#input_image').prop('width') > $('#output_image').prop('width')) {
           $('#input_image').prop('width', $('#output_image').prop('width'));
           $('#input_image').prop('height', $('#output_image').prop('height'));
@@ -24,6 +23,7 @@ Dropzone.options.DropZoneFiddle = {
           $('#output_image').prop('width', $('#input_image').prop('width'));
           $('#output_image').prop('height', $('#input_image').prop('height'));
         }
+        $('#compare_image').twentytwenty();
       };
       fr.readAsDataURL(file);
       $('#output_image').attr('src', 'data:image/jpeg;base64, ' + responseText);
@@ -31,9 +31,6 @@ Dropzone.options.DropZoneFiddle = {
 
       $('#DropZoneFiddle').hide();
       $('#output_div').show();
-    });
-    this.on("complete", function(file) {
-      this.removeAllFiles(true);
     });
   }
 };

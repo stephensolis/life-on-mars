@@ -40,8 +40,12 @@ $( document ).ready(function() {
 
   //-------------------------------------------------------------------------------------------------------
   $('#output_new_image').click(function () {
+    document.getElementById('DropZoneFiddle').dropzone.removeAllFiles(true);
     $('#DropZoneFiddle').show();
     $('#output_div').hide();
+  });
+  $('#output_try_again').click(function () {
+    $('#DropZoneFiddle').trigger();
   });
 
   window.selected_model = 'earth';
@@ -51,6 +55,8 @@ $( document ).ready(function() {
 
     $('.card').removeClass('card-selected');
     $(this).addClass('card-selected');
+
+    $('#output_new_image').click();
   });
 
   $(".card[data-model='" + window.location.hash.substring(1) + "']").click();
