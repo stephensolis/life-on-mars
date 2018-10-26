@@ -8,7 +8,7 @@ This work is a submission to the [NIPS Workshop on Machine Learning for Creativi
 |:-:|:-:|:-:|:-:|:-:|
 | [Stephen Solis][StephenSolis-web]  | [Albert Jimenez][AlbertJimenez-web] | [Adria Romero][AdriaRomero-web] | [Mohamed Akrout][MohamedAkrout-web] |  [Anirudh Challa][AnirudhChalla-web] | 
 
-[StephenSolis-photo]: https://user-images.githubusercontent.com/12190870/47591201-b273d180-d93c-11e8-8c6f-fd77be81606f.png
+[StephenSolis-photo]: https://user-images.githubusercontent.com/12190870/47591238-dc2cf880-d93c-11e8-9885-dcced755bcf8.png
 [AlbertJimenez-photo]: https://user-images.githubusercontent.com/5657335/47261794-9e941f80-d4a5-11e8-8850-7add90e97944.png
 [AdriaRomero-photo]: https://user-images.githubusercontent.com/5657335/47261792-9a680200-d4a5-11e8-9982-df7f8069dc31.png
 [MohamedAkrout-photo]: https://user-images.githubusercontent.com/5657335/47261796-a18f1000-d4a5-11e8-9924-3b2008fa604c.png
