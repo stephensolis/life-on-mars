@@ -1,6 +1,6 @@
 # Life on Mars?
 ## [NIPS Workshop on Machine Learning for Creativity and Design](https://nips.cc/Conferences/2018/Schedule?showEvent=10924)
-This work is a submission to the NIPS Workshop on Machine Learning for Creativity and Design](https://nips.cc/Conferences/2018/Schedule?showEvent=10924).
+This work is a submission to the [NIPS Workshop on Machine Learning for Creativity and Design](https://nips.cc/Conferences/2018/Schedule?showEvent=10924).
 
 ## Team
 
