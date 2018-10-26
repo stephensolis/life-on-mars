@@ -22,7 +22,9 @@ This work is a submission to the [NIPS Workshop on Machine Learning for Creativi
 [AnirudhChalla-web]: https://www.linkedin.com/in/anirudhchalla2907/
 
 ## Abstract
-Is there life on Mars? David Bowie was not the only human to have ever wondered about the existence of life on the red planet. Regardless of whether it’s possible or not, how might we imagine human civilization on Mars? 
+_Is there life on Mars?_
+
+David Bowie was not the only human to have ever wondered about the existence of life on the red planet. Regardless of whether it’s possible or not, how might we imagine human civilization on Mars? 
 
 This project attempts to present an artistic representation of Mars after undergoing terraforming by humans. As a result of this planetary engineering technique, Mars’s surface would adopt a more habitable appearance, similar to that of the Earth. As an atmosphere is built and temperatures rise, the water cycle begins to take form. Clouds develop, mountains become covered in snow, rivers start flowing down to the green covered fields, and the rocky Martian deserts are replaced by trees and forests.
 
