@@ -33,3 +33,9 @@ There has been a lot of work in image (synthetic) generation using Artificial In
 
 ## Results
 
+| Original  | Styled |
+| ------------- | ------------- |
+| ![](https://raw.githubusercontent.com/stephensolis/life-on-mars/master/docs/assets/img/1_orig.jpg)  | ![](https://raw.githubusercontent.com/stephensolis/life-on-mars/master/docs/assets/img/1_select.jpg) |
+| ![](https://raw.githubusercontent.com/stephensolis/life-on-mars/master/docs/assets/img/2_orig.jpg)  | ![](https://raw.githubusercontent.com/stephensolis/life-on-mars/master/docs/assets/img/2_select.jpg) |
+| ![](https://raw.githubusercontent.com/stephensolis/life-on-mars/master/docs/assets/img/3_orig.jpg)  | ![](https://raw.githubusercontent.com/stephensolis/life-on-mars/master/docs/assets/img/3_select.jpg) |
+| ![](https://raw.githubusercontent.com/stephensolis/life-on-mars/master/docs/assets/img/4_orig.jpg)  | ![](https://raw.githubusercontent.com/stephensolis/life-on-mars/master/docs/assets/img/4_select.jpg) |
