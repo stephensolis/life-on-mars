@@ -1,8 +1,6 @@
-# spAIce 2018
-## [Space Apps Challenge 2018](https://2018.spaceappschallenge.org/)
-This work is a submission to the [Artify the Earth](https://2018.spaceappschallenge.org/challenges/help-others-discover-earth/artify-earth/details) challenge.
-
-<img src="https://pbs.twimg.com/profile_images/1039168419587928065/w8VGYtei_400x400.jpg" width="120"> <img src="https://pbs.twimg.com/profile_images/188302352/nasalogo_twitter_400x400.jpg" width="100"> *SpaceApps is a NASA incubator innovation program.*
+# Life on Mars?
+## [NIPS Workshop on Machine Learning for Creativity and Design](https://nips.cc/Conferences/2018/Schedule?showEvent=10924)
+This work is a submission to the NIPS Workshop on Machine Learning for Creativity and Design](https://nips.cc/Conferences/2018/Schedule?showEvent=10924).
 
 ## Team
 
@@ -23,16 +21,15 @@ This work is a submission to the [Artify the Earth](https://2018.spaceappschalle
 [MohamedAkrout-web]: https://www.linkedin.com/in/mohamed-akrout/
 [AnirudhChalla-web]: https://www.linkedin.com/in/anirudhchalla2907/
 
-## Challenge
-[Artify the Earth](https://2018.spaceappschallenge.org/challenges/help-others-discover-earth/artify-earth/details) challenge aims to adapt NASA images or other spectral data to a medium of your choice, and develop your own interpretation of NASA’s Earth observations. Or, build a tool or an application that allows others to transform or enhance NASA’s Earth images or spectral band data into novel creations.
+## Description
+Is there life on Mars? David Bowie was not the only human to have ever wondered about the existence of life on the red planet. Regardless of whether it’s possible or not, how might we imagine human civilization on Mars? 
+
+This project attempts to present an artistic representation of Mars after undergoing terraforming by humans. As a result of this planetary engineering technique, Mars’s surface would adopt a more habitable appearance, similar to that of the Earth. As an atmosphere is built and temperatures rise, the water cycle begins to take form. Clouds develop, mountains become covered in snow, rivers start flowing down to the green covered fields, and the rocky Martian deserts are replaced by trees and forests.
+
+The recreation of that process was performed using an approach based on image to image translation trained on a dataset based on images of Earth and Mars (fiction and NASA).
 
 ## Abstract
 There has been a lot of work in image (synthetic) generation using Artificial Intelligence in the last couple of years, but this work is distinguished from the rest since its novelty in the application of these state-of-the-art technologies to satellite and planet images. These methods are popularly known as [Neural Style Transfer](https://arxiv.org/abs/1508.06576), where the model is exposed to two domains: (1) the *content domain*, and (2) the *style reference domain*. After a training process, the model has learned the main features from the two domains, and it can act as a "styler" such that we present an input image, it transforms it to look like the content image (in this case Earth images), but “painted” in the appearance of the style reference domain.
 
 ## Solution
 We used the state of the art models of style transfer for this project. We present a front end tool (https://artifyearth.co/)  where users can choose various style options (e.g. Earth, Moon, Mars, Jupiter, etc.) including converting earth images to other planets and vice versa. We also have some options to convert images into an artistic impression of the image.  
-
-## Slides
-
-## Results
-
